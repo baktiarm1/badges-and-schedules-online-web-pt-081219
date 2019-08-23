@@ -14,10 +14,11 @@ def assign_rooms(speakers)
   return new_arr
 end
 
-def printer(attendess)
-  
- name = batch_badge_creator(attendess)
-puts name.each {|name| puts name}
-puts assign_rooms (attendess)
+def printer(attendees)
+  attendees.each_with_index do |name, index|
+    puts badge_maker(name)
+    puts assign_room(name, index + 1)
+  end
 end
+
 
